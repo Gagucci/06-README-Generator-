@@ -10,23 +10,27 @@ For this assignment the goal was to take the provided starter code and use the i
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
+- [Images](#images)
+- [Links](#links)
 - [Questions](#questions)
 
 ## Installation
 
-Run 'node index.js' in the console
+Installation goes as follows:
+
+Run 'npm install' in the command line to install the inquirer package.
+
+Run 'node index.js' in the command line to run the application.
+
+Answer the prompts to generate a README.md file.
 
 ## Usage
 
-For users to have a quick and easy way to create
+For users to have a quick and easy way to create a professional README.md file for their projects.
 
 ## License
 
-This project is protected under the MIT license.
-For more information visit [here:](https://opensource.org/licenses/MIT).
-
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+N/A
 
 ## Contributing
 
@@ -34,9 +38,11 @@ Big thanks to Breakout Room 4, The Dream Team, for providing me with help in doi
 
 ## Images
 
-N/A
+![Image of command line](<./develop/images/Screenshot%20(10).png>)
 
 ## Links
+
+[Link to GitHub Repository](https://github.com/Gagucci/09-README-Generator-.git)
 
 ## Questions
 
