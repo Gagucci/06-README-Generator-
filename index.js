@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const markdownGenerator = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const questions = [
   "What is the title of your project?",
   "What is the description of your project?",
@@ -16,11 +16,65 @@ const questions = [
   "What is your email address?",
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Create a function to write README file
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) => {
+    if (err) {
+      throw new Error("Something went wrong!" + err.message);
+    } else {
+      console.log("README.md file created successfully!");
+    }
+  });
+}
 
-// TODO: Create a function to initialize app
-function init() {}
+// Create a function to initialize app
+function init() {
+  inquirer
+    .prompt([
+      {
+        ask: questions[0],
+        name: "title",
+      },
+      {
+        ask: questions[1],
+        name: "description",
+      },
+      {
+        ask: questions[2],
+        name: "installation",
+      },
+      {
+        ask: questions[3],
+        name: "usage",
+      },
+      {
+        type: "list",
+        ask: questions[4],
+        choices: ["MIT", "Apache", "GPL", "BSD", "None"],
+        name: "license",
+      },
+      {
+        ask: questions[5],
+        name: "contributing",
+      },
+      {
+        ask: questions[6],
+        name: "tests",
+      },
+      {
+        ask: questions[7],
+        name: "github",
+      },
+      {
+        ask: questions[8],
+        name: "email",
+      },
+    ])
+    .then((response) => {
+      console.log(response);
+      writeToFile("READMEnew.md", generateMarkdown(response));
+    });
+}
 
 // Function call to initialize app
 init();
