@@ -72,7 +72,7 @@ function init() {
     ])
     .then((response) => {
       console.log(response);
-      writeToFile("READMEnew.md", generateMarkdown(response));
+      writeToFile("READMEsample.md", generateMarkdown(response));
     });
 }
 
